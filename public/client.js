@@ -78,6 +78,7 @@ const updateGameView = (status, winner) => {
     showView('game');
     views.winner.classList.add('hidden');
   } else if (status === 'ended') {
+    showView('lobby');
     if (winner) {
       elements.winnerText.textContent = `Ganador: ${winner}`;
       views.winner.classList.remove('hidden');

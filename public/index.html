@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulsador</title>
-    <link rel="stylesheet" href="/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsador</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="container">
+  <div class="container">
     <header>
-        <h1>Pulsador</h1>
+      <h1>Pulsador</h1>
     </header>
 
     <section id="landing" class="card">
-        <h2>Bienvenido</h2>
-        <div class="actions">
-            <button id="createRoomBtn" class="primary">Crear sala</button>
-            <button id="joinRoomBtn" class="secondary">Unirse a sala</button>
-        </div>
+      <h2>Bienvenido</h2>
+      <div class="actions">
+        <button id="createRoomBtn" class="primary">Crear sala</button>
+        <button id="joinRoomBtn" class="secondary">Unirse a sala</button>
+      </div>
     </section>
 
     <section id="createForm" class="card hidden">
-        <h2>Crear sala</h2>
-        <label for="createName">Tu nombre</label>
-        <input type="text" id="createName" placeholder="Nombre" maxlength="20">
-        <button id="confirmCreate" class="primary">Crear</button>
-        <button class="link" data-back>Volver</button>
+      <h2>Crear sala</h2>
+      <label for="createName">Tu nombre</label>
+      <input type="text" id="createName" placeholder="Nombre" maxlength="20">
+      <button id="confirmCreate" class="primary">Crear</button>
+      <button class="link" data-back>Volver</button>
     </section>
 
     <section id="joinForm" class="card hidden">
-        <h2>Unirse a sala</h2>
-        <label for="joinCode">Código de sala</label>
-        <input type="text" id="joinCode" placeholder="Código" maxlength="6">
-        <label for="joinName">Tu nombre</label>
-        <input type="text" id="joinName" placeholder="Nombre" maxlength="20">
-        <button id="confirmJoin" class="primary">Entrar</button>
-        <button class="link" data-back>Volver</button>
+      <h2>Unirse a sala</h2>
+      <label for="joinCode">Código de sala</label>
+      <input type="text" id="joinCode" placeholder="Código" maxlength="6">
+      <label for="joinName">Tu nombre</label>
+      <input type="text" id="joinName" placeholder="Nombre" maxlength="20">
+      <button id="confirmJoin" class="primary">Entrar</button>
+      <button class="link" data-back>Volver</button>
     </section>
 
     <section id="lobby" class="card hidden">
-        <div class="room-header">
-            <div>
-                <p class="label">Sala</p>
-                <p id="roomId" class="room-id"></p>
-            </div>
-            <div id="hostBadge" class="badge hidden">Host</div>
+      <div class="room-header">
+        <div>
+          <p class="label">Sala</p>
+          <p id="roomId" class="room-id"></p>
         </div>
-        <p id="statusMessage">Esperando a que el host inicie la ronda</p>
-        <ul id="playersList" class="players"></ul>
-        <div id="controls" class="controls hidden">
-            <button id="startRound" class="primary">Iniciar ronda</button>
-            <button id="nextRound" class="secondary hidden">Siguiente ronda</button>
-        </div>
+        <div id="hostBadge" class="badge hidden">Host</div>
+      </div>
+      <p id="statusMessage">Esperando a que el host inicie la ronda</p>
+      <ul id="playersList" class="players"></ul>
+      <div id="controls" class="controls hidden">
+        <button id="startRound" class="primary">Iniciar ronda</button>
+        <button id="nextRound" class="secondary hidden">Siguiente ronda</button>
+      </div>
     </section>
 
     <section id="game" class="card hidden">
-        <p id="gameStatus" class="game-status">¡Pulsa el botón lo más rápido posible!</p>
-        <button id="bigButton" class="big-button">Pulsa</button>
+      <p id="gameStatus" class="game-status">¡Pulsa el botón lo más rápido posible!</p>
+      <button id="bigButton" class="big-button">Pulsa</button>
     </section>
 
     <section id="winner" class="card hidden">
-        <p id="winnerText" class="winner-text"></p>
+      <p id="winnerText" class="winner-text"></p>
     </section>
 
     <section id="error" class="card hidden error-card">
-        <p id="errorText"></p>
-        <button class="link" data-back>Volver al inicio</button>
+      <p id="errorText"></p>
+      <button class="link" data-back>Volver al inicio</button>
     </section>
-</div>
+  </div>
 
-<script src="/socket.io/socket.io.js"></script>
-<script src="/client.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
 </body>
 </html>
